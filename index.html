@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Varaha | Design and Construction</title>
+    <link rel="icon" href="https://framerusercontent.com/images/VREsFAY93dsg8s3S53DnoJ9YL0.png">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/old-home" class="nav-logo">
+                <img src="https://framerusercontent.com/images/VREsFAY93dsg8s3S53DnoJ9YL0.png" alt="Shree Varaha Logo">
+                <div class="nav-logo-text">
+                    <strong>Shree Varaha</strong><br>
+                    <span>Design and Construction</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">Our Company</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#projects">Our Projects</a></li>
+            </ul>
+            <a href="#contact" class="btn-contact">Contact</a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">Our Company</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#projects">Our Projects</a></li>
+            <li><a href="#contact" class="btn-contact-mobile">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Project Video">
+        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="videoModalClose" aria-label="Close video">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1 1L19 19M19 1L1 19" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="video-wrapper">
+                <!-- Replace the src URL below with your actual YouTube/Vimeo embed link -->
+                <iframe id="videoIframe" src=""
+                    data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1"
+                    title="Shree Varaha Project Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-up">"Where smart design and expert construction come together for lasting results."</h1>
+
+            <div class="hero-image-container fade-up" style="transition-delay: 0.2s;">
+                <!-- Continuously looping background video -->
+                <video class="hero-video" src="/hero-video.mp4" autoplay loop muted playsinline preload="auto"
+                    aria-hidden="true">
+                </video>
+
+                <!-- Dark gradient overlay to ensure text readability -->
+                <div class="hero-video-gradient"></div>
+
+                <div class="hero-image-overlay">
+                    <p>Successfully transformed a vacant plot into a 305,000 sq. ft. steel structure within 8 months.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hero-stats-grid fade-up" style="transition-delay: 0.4s;">
+                <div class="stat-item">
+                    <span class="stat-number">35+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">400+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1,000,000+</span>
+                    <span class="stat-label">Sq. Ft.</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500,000+</span>
+                    <span class="stat-label">Sq. Ft.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-header fade-up">
+                    <div class="section-label">ABOUT US</div>
+                    <h2 class="about-title">Shree Varaha</h2>
+                    <p class="about-intro">Is committed to setting a benchmark in the industry by providing exceptional
+                        quality in design and construction services.</p>
+                </div>
+                <div class="about-content fade-up" style="transition-delay: 0.2s;">
+                    <p>With a focus on precision and professionalism, Shree Varaha ensures that each project is
+                        meticulously planned and executed to align seamlessly with client expectations.</p>
+                    <p>Our team dedicates itself to not only meeting but exceeding client needs by transforming their
+                        visions into reality. From initial concept to final completion, we emphasize a comprehensive
+                        approach, combining technical expertise with creativity to deliver results that truly reflect
+                        the client’s unique ideas and aspirations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Dark) -->
+    <section id="projects" class="projects section dark">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label white">PROJECTS</div>
+                <h2>Completed Projects</h2>
+            </div>
+
+            <div class="project-grid fade-up" style="transition-delay: 0.2s;">
+                <div class="project-card large">
+                    <img src="https://framerusercontent.com/images/jq3DA77mJPumq07Gg474nyl9k0.jpg" alt="Project 1">
+                </div>
+                <div class="project-card slim">
+                    <img src="https://framerusercontent.com/images/WLPCqmZutA9GoLRbLnMWNNU0T7M.jpg" alt="Project 2">
+                </div>
+                <div class="project-card half">
+                    <img src="https://framerusercontent.com/images/iQICviV8lGHAwiogbjyu5cdc44.jpg" alt="Project 3">
+                </div>
+                <div class="project-card half">
+                    <img src="https://framerusercontent.com/images/IiflEYpjxdY7e54Q77LI4F5d5KQ.jpg" alt="Project 4">
+                </div>
+            </div>
+
+            <a href="#" class="more-projects-link fade-up">More of our Projects →</a>
+        </div>
+    </section>
+
+    <!-- Ongoing Projects Section (Dark) -->
+    <section class="ongoing-projects section dark">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>Ongoing Projects and Design Work</h2>
+            </div>
+
+            <div class="ongoing-grid fade-up" style="transition-delay: 0.2s;">
+                <div class="ongoing-item"><img
+                        src="https://framerusercontent.com/images/WqGDxvQQH7E0ZMP8f84ArI4H4Sc.png" alt="Ongoing 1">
+                </div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/nMk24YHSg2z4ZZetMfAtkgWq7M.png"
+                        alt="Ongoing 2"></div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/7eXzVAZCHeJxp7oBa9oFt84a1M.png"
+                        alt="Ongoing 3"></div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/RQ1IMbqgSkRdyAkcFpLf3JD0QQ.jpg"
+                        alt="Ongoing 4"></div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/YOUia08u9ieaIrcfeGjYaeJlVM.jpg"
+                        alt="Ongoing 5"></div>
+                <div class="ongoing-item"><img
+                        src="https://framerusercontent.com/images/SqSgck9LwKkazPtJ1qnLPNGqsXc.jpg" alt="Ongoing 6">
+                </div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/xrbfChx2A2IlASDg9PsNPSzTWY.jpg"
+                        alt="Ongoing 7"></div>
+                <div class="ongoing-item"><img src="https://framerusercontent.com/images/9CbcPnm6QgHi2PyfnVzPpVoBcU.jpg"
+                        alt="Ongoing 8"></div>
+                <div class="ongoing-item"><img
+                        src="https://framerusercontent.com/images/TgPWuJJ8SB4ZEUCcAik8AeVS8JE.jpg" alt="Ongoing 9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">SERVICES</div>
+                <h2>This is what we're best at</h2>
+            </div>
+
+            <div class="services-grid fade-up" style="transition-delay: 0.2s;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Town planning</h3>
+                    <p>Shree Varaha shapes town planning by creating vibrant urban spaces that balance growth and
+                        community needs.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>Construction Management</h3>
+                    <p>Shree Varaha oversees construction management with precision, ensuring every phase is on schedule
+                        and within budget.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Structural engineering</h3>
+                    <p>Shree Varaha delivers structural engineering solutions that blend strength with architectural
+                        integrity.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Other civil engineering services</h3>
+                    <p>Shree Varaha offers diverse civil engineering services, delivering innovative and reliable
+                        infrastructure solutions.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Civil construction</h3>
+                    <p>Shree Varaha excels in civil construction, building solid foundations for communities with
+                        quality and integrity.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Steel fabrication</h3>
+                    <p>Shree Varaha provides top-tier steel fabrication, combining durability with precise craftsmanship
+                        in every project.</p>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer section dark">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <div class="section-label white">CONTACT US</div>
+                    <h2>Have any Questions?<br>Reach out directly</h2>
+                    <div class="contact-details">
+                        <a href="tel:+917022083194" class="contact-item">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"
+                                    fill="currentColor">
+                                    <path
+                                        d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4l-30.4,20.26a111.39,111.39,0,0,1-40.12-40.12L109.7,88.43A16,16,0,0,0,111.1,73.26l-.06-.13L89.93,26A16,16,0,0,0,71.21,17C43.51,26.47,24,52.28,24,82.49A151.7,151.7,0,0,0,173.51,232c30.21,0,56-19.51,65.49-47.21A16,16,0,0,0,222.37,158.46ZM173.51,216A135.66,135.66,0,0,1,40,82.49c0-21.78,13.88-40.23,33.56-47.51l21.18,47.1-20.72,13.82a8,8,0,0,0-2.28,11,127.1,127.1,0,0,0,51.34,51.34,8,8,0,0,0,11-2.28l13.82-20.72,47.1,21.18C189.24,206.12,170.79,220,173.51,216Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span>+91 7022083194</span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon address">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"
+                                    fill="currentColor">
+                                    <path
+                                        d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.1,0,254.19,254.19,0,0,0,41.45-38.3c27.49-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-59.32-72-118a72,72,0,0,1,144,0C200,162.68,144.53,209,128,222Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span>2nd Floor, Guru Sankeerna Complex, Opposite Of New Ksrtc Bus Stand, Bannanje, Udupi,
+                                576101</span>
+                        </div>
+                        <a href="mailto:info@shreevaraha.com" class="email-btn-footer">
+                            info@shreevaraha.com
+                        </a>
+                    </div>
+
+                    <div class="social-links-footer">
+                        <a href="#" class="social-btn">YouTube</a>
+                        <a href="#" class="social-btn">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <ul class="footer-links">
+                        <li><a href="#about">Our Company</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#projects">Our Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="footer-copyright">
+                        <p>© 2024 Shree Varaha Design and Construction. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
