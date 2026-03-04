@@ -94,12 +94,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ─── Observers for New Sections ────────────────────────────────────────────
+    document.querySelectorAll('.process-grid, .testimonial-grid, .contact-form-card').forEach(grid => {
+        new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    Array.from(entry.target.children).forEach((child, i) => {
+                        child.style.opacity = '0';
+                        child.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            child.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                            child.style.opacity = '1';
+                            child.style.transform = 'translateY(0)';
+                        }, 100 + i * 150);
+                    });
+                }
+            });
+        }, { threshold: 0.1 }).observe(grid);
+    });
+
     // ─── Navbar scroll shadow ──────────────────────────────────────────────────
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         navbar.style.boxShadow = window.scrollY > 50
             ? '0 2px 20px rgba(0,0,0,0.06)'
             : 'none';
+        navbar.style.background = window.scrollY > 50
+            ? 'rgba(251, 251, 249, 0.95)'
+            : 'rgba(251, 251, 249, 0.85)';
+    });
+
+    // ─── Magnetic Buttons ──────────────────────────────────────────────────────
+    const magneticBtns = document.querySelectorAll('.btn-contact, .btn-submit, .hero-play-btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = `translate(0px, 0px)`;
+        });
+    });
+
+    // ─── Contact Form Submission ───────────────────────────────────────────────
+    const contactForm = document.getElementById('mainContactForm');
+    contactForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+
+        setTimeout(() => {
+            submitBtn.innerHTML = 'Success! Message Sent';
+            submitBtn.style.background = '#28a745';
+            contactForm.reset();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+            }, 3000);
+        }, 1500);
     });
 
 });
