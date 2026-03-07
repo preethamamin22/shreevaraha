@@ -45,26 +45,6 @@
         </ul>
     </div>
 
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Project Video">
-        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
-        <div class="video-modal-content">
-            <button class="video-modal-close" id="videoModalClose" aria-label="Close video">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M1 1L19 19M19 1L1 19" stroke="white" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </button>
-            <div class="video-wrapper">
-                <!-- Replace the src URL below with your actual YouTube/Vimeo embed link -->
-                <iframe id="videoIframe" src=""
-                    data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1"
-                    title="Shree Varaha Project Video" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -72,10 +52,9 @@
             <h1 class="fade-up">"Where smart design and expert construction come together for lasting results."</h1>
 
             <div class="hero-image-container fade-up" style="transition-delay: 0.2s;">
-                <!-- Continuously looping background video -->
-                <video class="hero-video" src="/hero-video.mp4" autoplay loop muted playsinline preload="auto"
-                    aria-hidden="true">
-                </video>
+                <!-- Static background image for government professional look -->
+                <img class="hero-image" src="https://framerusercontent.com/images/jq3DA77mJPumq07Gg474nyl9k0.jpg"
+                    alt="Shree Varaha Construction">
 
                 <!-- Dark gradient overlay to ensure text readability -->
                 <div class="hero-video-gradient"></div>
@@ -104,7 +83,6 @@
                     <span class="stat-label">Sq. Ft.</span>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- About Section -->
@@ -199,87 +177,40 @@
 
             <div class="services-grid fade-up" style="transition-delay: 0.2s;">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Town planning</h3>
-                    <p>Shree Varaha shapes town planning by creating vibrant urban spaces that balance growth and
-                        community needs.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3>Town Planning</h3>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha shapes town planning by creating vibrant urban spaces that balance economic growth,
+                        environmental sustainability, and community needs.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="3" y1="9" x2="21" y2="9"></line>
-                            <line x1="9" y1="21" x2="9" y2="9"></line>
-                        </svg>
-                    </div>
                     <h3>Construction Management</h3>
-                    <p>Shree Varaha oversees construction management with precision, ensuring every phase is on schedule
-                        and within budget.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha oversees construction management with absolute precision, ensuring every phase is
+                        meticulously planned on schedule and strictly within budget.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Structural engineering</h3>
-                    <p>Shree Varaha delivers structural engineering solutions that blend strength with architectural
-                        integrity.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3>Structural Engineering</h3>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha delivers advanced structural engineering solutions that blend robust strength with
+                        long-lasting architectural integrity.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Other civil engineering services</h3>
-                    <p>Shree Varaha offers diverse civil engineering services, delivering innovative and reliable
-                        infrastructure solutions.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3>Civil Infrastructure</h3>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha offers diverse civil engineering infrastructure services, delivering innovative,
+                        scalable, and highly reliable public solutions.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
-                            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
-                        </svg>
-                    </div>
-                    <h3>Civil construction</h3>
-                    <p>Shree Varaha excels in civil construction, building solid foundations for communities with
-                        quality and integrity.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3>Civil Construction</h3>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha excels in civil construction, building the solid, foundational structures necessary
+                        for developing vibrant communities with quality and integrity.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                    <h3>Steel fabrication</h3>
-                    <p>Shree Varaha provides top-tier steel fabrication, combining durability with precise craftsmanship
-                        in every project.</p>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3>Steel Fabrication</h3>
+                    <div class="service-line"></div>
+                    <p>Shree Varaha provides top-tier industrial steel fabrication, combining immense durability with
+                        precise engineering craftsmanship.</p>
                 </div>
             </div>
             <!-- Work Process Section -->

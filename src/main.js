@@ -30,36 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.05 }).observe(grid);
     });
 
-    // ─── Video Modal ───────────────────────────────────────────────────────────
-    const heroPlayBtn = document.getElementById('heroPlayBtn');
-    const videoModal = document.getElementById('videoModal');
-    const videoModalClose = document.getElementById('videoModalClose');
-    const videoModalBackdrop = document.getElementById('videoModalBackdrop');
-    const videoIframe = document.getElementById('videoIframe');
 
-    function openVideoModal() {
-        if (!videoModal || !videoIframe) return;
-        videoIframe.src = videoIframe.dataset.src;
-        videoModal.classList.add('open');
-        document.body.classList.add('no-scroll');
-    }
-
-    function closeVideoModal() {
-        if (!videoModal) return;
-        videoModal.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-        setTimeout(() => { if (videoIframe) videoIframe.src = ''; }, 400);
-    }
-
-    heroPlayBtn?.addEventListener('click', openVideoModal);
-    videoModalClose?.addEventListener('click', closeVideoModal);
-    videoModalBackdrop?.addEventListener('click', closeVideoModal);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && videoModal?.classList.contains('open')) {
-            closeVideoModal();
-        }
-    });
 
     // ─── Mobile Menu Toggle ────────────────────────────────────────────────────
     const menuToggle = document.getElementById('menuToggle');
@@ -126,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ─── Magnetic Buttons ──────────────────────────────────────────────────────
-    const magneticBtns = document.querySelectorAll('.btn-contact, .btn-submit, .hero-play-btn');
+    const magneticBtns = document.querySelectorAll('.btn-contact, .btn-submit');
     magneticBtns.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
