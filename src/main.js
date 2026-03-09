@@ -111,6 +111,40 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'rgba(251, 251, 249, 0.85)';
     });
 
+    // ─── Stat Counter Animation ────────────────────────────────────────────────
+    const animateStats = () => {
+        const stats = document.querySelectorAll('.stat-number');
+        stats.forEach(stat => {
+            const target = +stat.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16);
+
+            let current = 0;
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    stat.innerText = Math.ceil(current).toLocaleString();
+                    requestAnimationFrame(updateCount);
+                } else {
+                    stat.innerText = target.toLocaleString();
+                }
+            };
+            updateCount();
+        });
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStats();
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsGrid = document.querySelector('.hero-stats-grid');
+    if (statsGrid) statsObserver.observe(statsGrid);
+
     // ─── Magnetic Buttons ──────────────────────────────────────────────────────
     const magneticBtns = document.querySelectorAll('.btn-contact, .btn-submit');
     magneticBtns.forEach(btn => {

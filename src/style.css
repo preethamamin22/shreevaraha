@@ -357,13 +357,18 @@ img {
   flex-direction: column;
 }
 
-.stat-item .stat-number {
+.stat-item .stat-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.stat-item .stat-number,
+.stat-item .stat-suffix {
   font-size: 42px;
-  /* reduced from 54 */
   font-family: var(--font-heading);
   color: #11468D;
-  /* Professional blue instead of primary text color */
-  margin-bottom: 8px;
   line-height: 1;
   font-weight: 600;
 }
