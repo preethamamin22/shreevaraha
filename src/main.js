@@ -37,11 +37,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobileMenu');
 
     if (menuToggle && mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-links li');
+
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
+            const isActive = menuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.classList.toggle('no-scroll');
+
+            if (isActive) {
+                mobileLinks.forEach((link, i) => {
+                    link.style.opacity = '0';
+                    link.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        link.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                        link.style.opacity = '1';
+                        link.style.transform = 'translateY(0)';
+                    }, 200 + i * 100);
+                });
+            }
         });
+
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
