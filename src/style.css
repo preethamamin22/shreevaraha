@@ -21,8 +21,8 @@
   --font-body: 'Inter', sans-serif;
 
   /* Spacing & Utilities */
-  --section-padding: 160px;
-  /* More breathing room */
+  --section-padding: 100px;
+  /* Reduced from 160px for better flow */
   --container-max-width: 1200px;
   --radius-lg: 32px;
   --radius-md: 16px;
@@ -426,17 +426,17 @@ img {
 
 .project-card.large {
   grid-column: span 4;
-  aspect-ratio: 1.85;
+  aspect-ratio: 1.9;
 }
 
 .project-card.slim {
   grid-column: span 2;
-  aspect-ratio: 0.9;
+  aspect-ratio: 0.95;
 }
 
 .project-card.half {
   grid-column: span 3;
-  aspect-ratio: 1.2;
+  aspect-ratio: 1.4;
 }
 
 .ongoing-grid {
@@ -583,8 +583,8 @@ img {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: flex-start;
+  gap: 40px;
 }
 
 .footer-links {
